@@ -4,8 +4,13 @@ import "./Form.style.css";
 
 export const Form = () => {
   const [password, setPassword] = useState("");
+  const [inputType, setInputType] = useState("password");
   const validateRegex = ["[a-zA-Z]", "\\d", "\\W"];
   let strength = null;
+
+  const onToggleInputType = () => {
+    setInputType(inputType === "password" ? "text" : "password");
+  };
 
   const onChange = (e) => {
     setPassword(e.target.value.trim());
@@ -24,17 +29,27 @@ export const Form = () => {
   }
 
   const [first, second, third] = getColorsForSections(strength);
+  const buttonText = inputType === "password" ? "Show" : "Hide";
 
   return (
     <>
       <form>
-        <input
-          type="password"
-          name="password"
-          className="input"
-          onChange={onChange}
-          required
-        />
+        <div className="inputWrap">
+          <input
+            type={inputType}
+            name="password"
+            className="input"
+            onChange={onChange}
+            required
+          />
+          <button
+            type="button"
+            className="toggleBtn"
+            onClick={onToggleInputType}
+          >
+            {buttonText}
+          </button>
+        </div>
       </form>
       <div className="wrap">
         <div className={`section ${first}`}></div>

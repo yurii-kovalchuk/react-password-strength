@@ -1,5 +1,11 @@
-.input {
+.inputWrap {
+  position: relative;
   width: 300px;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid grey;
@@ -8,6 +14,24 @@
 
 .input:focus {
   border-color: lightskyblue;
+}
+
+.toggleBtn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+}
+
+.toggleBtn:focus {
+  outline: none;
 }
 
 .wrap {
