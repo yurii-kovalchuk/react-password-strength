@@ -21,4 +21,22 @@
   width: 100%;
   height: 20px;
   background-color: grey;
+  transition: background-color 250ms ease-out;
+  border-radius: 5px;
+}
+
+.grey {
+  background-color: gray;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: gold;
+}
+
+.green {
+  background-color: lawngreen;
 }
