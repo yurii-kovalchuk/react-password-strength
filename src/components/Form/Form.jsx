@@ -39,6 +39,7 @@ export const Form = () => {
             type={inputType}
             name="password"
             className="input"
+            value={password}
             onChange={onChange}
             required
           />
